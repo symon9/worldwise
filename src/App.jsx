@@ -10,9 +10,10 @@ import CityList from "./components/CityList";
 import City from "./components/City";
 import CountryList from "./components/CountryList";
 import Form from "./components/Form";
+import ProtectedRoute from "./pages/ProtectedRoute";
+
 import { CitiesProvider } from "./contexts/CitiesContext";
 import { AuthProvider } from "./contexts/FakeAuthContext";
-import ProtectedRoute from "./pages/ProtectedRoute";
 
 function App() {
   return (
