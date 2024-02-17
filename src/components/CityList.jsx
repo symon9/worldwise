@@ -1,14 +1,8 @@
-import styles from "./CityList.module.css";
 import Spinner from "./Spinner";
+import styles from "./CityList.module.css";
 import CityItem from "./CityItem";
 import Message from "./Message";
-import PropTypes from "prop-types";
 import { useCities } from "../hooks/useCities";
-
-CityList.propTypes = {
-  isLoading: PropTypes.bool,
-  cities: PropTypes.array,
-};
 
 function CityList() {
   const { cities, isLoading } = useCities();

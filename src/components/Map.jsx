@@ -1,4 +1,3 @@
-//import { useNavigate } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 import styles from "./Map.module.css";
 import {
@@ -29,7 +28,7 @@ export default function Map() {
     getPosition,
   } = useGeolocate();
 
-  const { mapLat, mapLng } = useUrlPosition();
+  const [mapLat, mapLng] = useUrlPosition();
 
   useEffect(
     function () {
@@ -91,6 +90,6 @@ function DetectClick() {
   const navigate = useNavigate();
 
   useMapEvents({
-    click: (e) => navigate(`form?lat=${e.latlng.lat}&lng=${e.latlng.lat}`),
+    click: (e) => navigate(`form?lat=${e.latlng.lat}&lng=${e.latlng.lng}`),
   });
 }
