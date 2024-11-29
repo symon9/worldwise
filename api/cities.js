@@ -7,7 +7,7 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 export default async function handler(req, res) {
-  const filePath = path.join(__dirname, '../../data/cities.json');
+  const filePath = path.join(__dirname, '../data/cities.json');
 
   if (req.method === 'GET') {
     try {
