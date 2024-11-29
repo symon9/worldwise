@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
-import { useCities } from "../hooks/useCities";
 import styles from "./CityItem.module.css";
 import PropTypes from "prop-types";
+import { useCities } from "../hooks/useCities";
 
 CityItem.propTypes = {
   city: PropTypes.array,

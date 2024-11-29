@@ -107,7 +107,7 @@ function CitiesProvider({ children }) {
       });
       const data = await res.json();
 
-      dispatch({ type: "city/created", payload: data });
+      dispatch({ type: '"city/created', payload: data });
     } catch {
       dispatch({
         type: "rejected",

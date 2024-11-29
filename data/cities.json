@@ -25,18 +25,6 @@
       "id": "17806751"
     },
     {
-      "cityName": "Berlin",
-      "country": "Germany",
-      "emoji": "🇩🇪",
-      "date": "2027-02-12T09:24:11.863Z",
-      "notes": "Amazing 😃",
-      "position": {
-        "lat": 52.53586782505711,
-        "lng": 13.376933665713324
-      },
-      "id": 98443197
-    },
-    {
       "id": "e277",
       "cityName": "Tafawa Balewa",
       "country": "Nigeria",
@@ -46,18 +34,6 @@
       "position": {
         "lat": "9.746956312582398",
         "lng": "9.746956312582398"
-      }
-    },
-    {
-      "id": "80a4",
-      "cityName": "Cape Town",
-      "country": "South Africa",
-      "emoji": "🇿🇦",
-      "date": "2024-02-17T00:19:59.353Z",
-      "notes": "Nice place",
-      "position": {
-        "lat": "-33.91373381431626",
-        "lng": "18.539428710937504"
       }
     }
   ]
