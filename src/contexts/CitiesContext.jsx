@@ -7,7 +7,7 @@ CitiesProvider.propTypes = {
 
 export const CitiesContext = createContext();
 
-// const BASE_URL = "http://localhost:9000";
+const BASE_URL = "http://localhost:9000";
 
 const initialState = {
   cities: [],
@@ -61,7 +61,7 @@ function CitiesProvider({ children }) {
       dispatch({ type: "loading" });
 
       try {
-        const res = await fetch(`/api/cities`);
+        const res = await fetch(`${BASE_URL}/cities`);
         const data = await res.json();
         dispatch({ type: "cities/loaded", payload: data });
       } catch {
@@ -81,7 +81,7 @@ function CitiesProvider({ children }) {
       dispatch({ type: "loading" });
 
       try {
-        const res = await fetch(`/api/cities/${id}`);
+        const res = await fetch(`${BASE_URL}/cities/${id}`);
         const data = await res.json();
         dispatch({ type: "city/loaded", payload: data });
       } catch {
@@ -98,7 +98,7 @@ function CitiesProvider({ children }) {
     dispatch({ type: "loading" });
 
     try {
-      const res = await fetch(`/api/cities`, {
+      const res = await fetch(`${BASE_URL}/cities`, {
         method: "POST",
         body: JSON.stringify(newCity),
         headers: {
@@ -107,7 +107,7 @@ function CitiesProvider({ children }) {
       });
       const data = await res.json();
 
-      dispatch({ type: '"city/created', payload: data });
+      dispatch({ type: "city/created", payload: data });
     } catch {
       dispatch({
         type: "rejected",
@@ -119,7 +119,7 @@ function CitiesProvider({ children }) {
   async function deleteCity(id) {
     dispatch({ type: "loading" });
     try {
-      await fetch(`/api/cities/${id}`, {
+      await fetch(`${BASE_URL}/cities/${id}`, {
         method: "DELETE",
       });
       dispatch({ type: "city/deleted", payload: id });
